@@ -123,4 +123,4 @@ if __name__ == "__main__":
 		log("Started.")
 		check_connection()
 	else:
-		print "Usage: recon.py <email>"
+		print "Usage: reconmail.py <email>"
