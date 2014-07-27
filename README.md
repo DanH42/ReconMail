@@ -15,7 +15,7 @@ This script has not been tested on Windows, and may not work on non-*NIX systems
 Usage
 -----
 
-It's recommended that you run this script inside a screen session (`screen -S reconmail`) so ti can run in the background once you close the terminal.
+It's recommended that you run this script inside a screen session (`screen -S reconmail`) so it can run in the background once you close the terminal.
 
 To start the script:
 
