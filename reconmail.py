@@ -72,9 +72,9 @@ def check_connection():
 	
 
 def authenticate(response):
-	if "Message from" in response:
-		title = re.search('<h1>(.*):</h1>', response).group(1)
-		message = re.search('<b>Message #[0-9]*:</b>(.*)<form', response).group(1)
+	if "Click to acknowledge this message" in response:
+		title = re.search('<h1>(.*):?</h1>', response).group(1)
+		message = re.search('<b>Message #?[0-9]*:</b>(.*)<form', response).group(1)
 		message = message.replace("<br>", "\n").strip()
 		ack = re.search('name="a" value="([a-z]*)"', response).group(1)
 		msgid = re.search('name="msgid" value="([0-9]*)"', response).group(1)
@@ -93,7 +93,7 @@ def authenticate(response):
 		page.read()
 		page.close()
 
-		log("Authenticated!", True)
+		log("Authenticated!")
 
 		global email
 		msg  = "From: dan+python@hlavenka.me\r\n"
