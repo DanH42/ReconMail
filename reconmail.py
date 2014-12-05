@@ -95,6 +95,8 @@ def authenticate(response):
 
 		log("Authenticated!")
 
+		sleep(10)
+
 		global email
 		msg  = "From: dan+python@hlavenka.me\r\n"
 		msg += "To: " + email + "\r\n"
